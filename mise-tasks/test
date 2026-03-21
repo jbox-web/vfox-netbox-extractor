@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#MISE description="Run plugin tests - install and execute tool"
+set -euo pipefail
+
+mise plugin link --force netbox-extractor .
+mise cache clear
+mise install netbox-extractor@1.0.1
+
+# Capture and display the output while also verifying it
+output=$(mise exec "netbox-extractor@1.0.1" -- "netbox-extractor" --version)
+echo "netbox-extractor output: ${output}"
+
+if echo "${output}" | grep -q '1.0.1'; then
+  echo "✓ Tests passed"
+else
+  echo "✗ Test failed: expected version netbox-extractor@1.0.1"
+  exit 1
+fi
