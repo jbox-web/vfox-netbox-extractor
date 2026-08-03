@@ -1,5 +1,7 @@
 # vfox-netbox-extractor
 
+> **Deprecated** — this plugin is replaced by [jbox-web/aqua-registry](https://github.com/jbox-web/aqua-registry).
+
 [![CI](https://github.com/jbox-web/vfox-netbox-extractor/workflows/CI/badge.svg)](https://github.com/jbox-web/vfox-netbox-extractor/actions)
 
 A plugin for the [mise version manager](https://github.com/jdx/mise) to install [netbox-extractor](https://github.com/jbox-web/netbox-extractor)
